@@ -10,6 +10,15 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
+  if ((!!name) && (name.length > 3)) {
+    for (let char of name) {
+      if (char === " ") {
+        return false;
+      }
+    }
+    return true;
+  }
+  return false;
 }
 
 function sayHello() {
